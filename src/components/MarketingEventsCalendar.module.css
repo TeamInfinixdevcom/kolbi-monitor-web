@@ -1,0 +1,273 @@
+    /* ==========================================================
+    MarketingEventsCalendar.module.css
+    Apple Calendar Red Edition — Full Safari Compatible
+    ========================================================== */
+
+    :root {
+    --color-bg: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+    --color-card: rgba(255, 255, 255, 0.85);
+    --color-border: rgba(0, 0, 0, 0.08);
+    --color-border-light: rgba(0, 0, 0, 0.05);
+    --color-text: #1c1c1e;
+    --color-text-muted: #7a7a7a;
+    --color-primary: #ff3b30;
+    --color-primary-light: #ffeaea;
+    --color-error: #ff3b30;
+    --color-success: #34c759;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 6px 18px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 28px rgba(0,0,0,0.1);
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ---------------- ROOT ---------------- */
+    .root {
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------------- HEADINGS ---------------- */
+    .heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    /* ---------------- CALENDAR ---------------- */
+    .calendar {
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 16px 12px;
+    margin-bottom: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .calendar:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    }
+
+    /* ---------------- DATE ---------------- */
+    .selectedDate {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    font-weight: 500;
+    }
+
+    /* ---------------- EVENT LIST ---------------- */
+    .eventList {
+    margin-top: 20px;
+    padding-left: 0;
+    }
+
+    .eventItem {
+    background: var(--color-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    list-style: none;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .eventItem:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    }
+
+    /* ---------------- EVENT DETAILS ---------------- */
+    .eventTitle {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    }
+
+    .eventPlace {
+    color: #8e8e93;
+    font-size: 0.95rem;
+    }
+
+    .eventDesc {
+    color: #444;
+    font-size: 0.95rem;
+    margin: 4px 0;
+    line-height: 1.45;
+    }
+
+    .eventMeta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    }
+
+    /* ---------------- FORM ---------------- */
+    .formCard {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 30px 26px 20px;
+    margin-top: 24px;
+    max-width: 520px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .formCard:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    }
+
+    .formLabel {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 6px;
+    display: block;
+    }
+
+    /* ---------------- INPUTS ---------------- */
+    .formInput,
+    .formTextarea,
+    .formSelect {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 1rem;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.9);
+    transition: all var(--transition);
+    }
+
+    .formInput:focus,
+    .formTextarea:focus,
+    .formSelect:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+    background: #fff;
+    outline: none;
+    }
+
+    /* ---------------- CHECKBOXES ---------------- */
+    .formCheckboxList {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: rgba(249,249,250,0.9);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    padding: 10px 8px;
+    max-height: 180px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    }
+
+    .formCheckboxList::-webkit-scrollbar {
+    width: 6px;
+    }
+
+    .formCheckboxList::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+    }
+
+    .formCheckboxItem {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    }
+
+    .formCheckboxItem label {
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 1rem;
+    }
+
+    /* ---------------- BUTTONS ---------------- */
+    .formActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    }
+
+    .formButton {
+    background: linear-gradient(180deg, #ff3b30 0%, #e13228 100%);
+    color: #fff;
+    border: none;
+    border-radius: 9999px; /* estilo iOS pill */
+    padding: 10px 26px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 14px rgba(255, 59, 48, 0.25);
+    }
+
+    .formButton:hover {
+    background: linear-gradient(180deg, #ff4f44 0%, #d62821 100%);
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(255, 59, 48, 0.3);
+    }
+
+    .formButton:disabled {
+    background: #f3b9b9;
+    cursor: not-allowed;
+    opacity: 0.7;
+    }
+
+    .formButtonAlt {
+    background: #f2f2f7;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    font-weight: 500;
+    }
+
+    .formButtonAlt:hover {
+    background: #e5e5ea;
+    }
+
+    /* ---------------- MESSAGES ---------------- */
+    .formMsg {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    }
+
+    .formMsgError {
+    color: var(--color-error);
+    }
+
+    .formMsgOk {
+    color: var(--color-success);
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 600px) {
+    .formCard {
+        padding: 18px 12px 12px;
+        max-width: 98vw;
+    }
+
+    .eventItem {
+        padding: 12px 10px;
+    }
+    }

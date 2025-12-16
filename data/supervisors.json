@@ -1,0 +1,16 @@
+{
+  "supervisor1": {
+    "nombre": "Supervisor Principal",
+    "usuario_red": "supervisor1",
+    "correo": "supervisor@ice.go.cr",
+    "departamento": "Supervisión",
+    "password_hash": "02423ab2e61297b8262449c93e19be42fb5bbb275860a7d93b1ebdc7b6535ed7"
+  },
+  "gamend": {
+    "nombre": "Gabriel Elías Méndez Campos",
+    "usuario_red": "gamend",
+    "correo": "gmendez@ice.go.cr",
+    "departamento": "RCME",
+    "password_hash": "b28cadc52f3d653c1e0dca6f17ef6b6e7be92527f8b9ad59823170c02774a806"
+  }
+}

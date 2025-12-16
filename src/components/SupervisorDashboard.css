@@ -1,0 +1,362 @@
+/* =========================================
+   SUPERVISOR DASHBOARD - ESTILO APPLE 🍏
+   ========================================= */
+
+.dashboard-container {
+  background: linear-gradient(180deg, #f8f9fb 0%, #e9ecf2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
+  transition: background 0.3s ease;
+}
+
+/* ===== HEADER ===== */
+.dashboard-header {
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #111827;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header h1 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== BODY ===== */
+.supervisor-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  background: transparent;
+}
+
+/* ===== SIDEBAR (vidrio esmerilado) ===== */
+.supervisor-sidebar {
+  width: 250px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  color: #1f2937;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0 24px 24px 0;
+}
+
+.supervisor-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.supervisor-sidebar li {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.supervisor-sidebar li:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== MAIN CONTENT ===== */
+.supervisor-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 24px 0 0 0;
+  padding: 30px 40px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  animation: fadeUp 0.6s ease-out;
+}
+
+/* ===== ANIMACIÓN DE ENTRADA ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== TÍTULOS (Panel, Secciones, etc.) ===== */
+.panel h2,
+.supervisor-content h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg, #48c023, #23c50d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== FORM GRID ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-grid label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #111827;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.form-actions .btn-kolbi {
+  min-width: 100px;
+  text-align: center;
+}
+
+input, select, textarea, button {
+  transition: all 0.2s;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+/* ===== BOTONES ===== */
+.btn-kolbi {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f3f5 100%);
+  color: #007aff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btn-kolbi:hover {
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.btn-kolbi:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-kolbi:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== LISTA DE CARDS ===== */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+/* ===== TARJETAS (CARDS) ===== */
+.card-kolbi {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 16px 20px;
+  transition: all 0.25s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  animation: floatUp 0.5s ease-out;
+}
+
+.card-kolbi:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ===== ESTADOS DE INVENTARIO (COLORES) ===== */
+.card-kolbi[data-estado="bloqueado"] {
+  border-color: #ff8800;
+  background: linear-gradient(180deg, #fff5e5, #fffaf0);
+}
+
+.card-kolbi[data-estado="vendido"] {
+  border-color: #34c759;
+  background: linear-gradient(180deg, #e6f9eb, #f0fff4);
+}
+
+.card-kolbi[data-estado="reservado"] {
+  border-color: #ffd43b;
+  background: linear-gradient(180deg, #fff9e6, #fffdf2);
+}
+
+.card-kolbi[data-estado="disponible"] {
+  border-color: #2dd4bf;
+  background: linear-gradient(180deg, #e6fffa, #f2fffc);
+}
+
+.card-kolbi[data-estado="rechazado"] {
+  border-color: #9ca3af;
+  background: linear-gradient(180deg, #f3f4f6, #ffffff);
+}
+
+/* ===== PAGINACIÓN ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #007aff;
+  transition: all 0.2s;
+}
+
+.pagination button:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== SCROLL ===== */
+.supervisor-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.supervisor-content::-webkit-scrollbar-thumb {
+  background: #cbe1dd;
+  border-radius: 4px;
+}
+
+.supervisor-content::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===== FOOTER ===== */
+.supervisor-footer {
+  margin-top: auto;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ===== LOADING ===== */
+.loading {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.1rem;
+  color: #007aff;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .supervisor-sidebar {
+    width: 200px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .supervisor-main {
+    flex-direction: column;
+  }
+
+  .supervisor-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: space-around;
+    border-radius: 0;
+  }
+
+  .supervisor-sidebar li {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .supervisor-content {
+    border-radius: 0;
+    padding: 20px;
+  }
+}

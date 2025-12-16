@@ -1,0 +1,366 @@
+/* Fondo principal - Gradiente dinámico estilo Apple */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0f2e 0%, #2d0a3e 25%, #3d0a3e 50%, #2d0a3e 75%, #1a0f2e 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animación de gradiente dinámico */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Partículas suaves de fondo - efecto más orgánico */
+.login-container::before {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -50%;
+  left: -50%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,100,150,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(100,150,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(150,100,255,0.05) 0%, transparent 50%);
+  animation: moveParticles 40s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes moveParticles {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  25% { transform: translate(50px,-30px) scale(1.05); }
+  50% { transform: translate(-30px,50px) scale(0.95); }
+  75% { transform: translate(30px,30px) scale(1.03); }
+}
+
+/* Caja del login - Glassmorphism estilo Apple */
+.login-box {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 60px 48px;
+  width: 420px;
+  max-width: 90vw;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  opacity: 0;
+  transform: perspective(1200px) translateZ(-400px) scale(0.7) rotateX(30deg) rotateY(0deg);
+  animation: appleSlideInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  z-index: 1;
+}
+
+/* Animación de entrada estilo Apple - más elegante */
+@keyframes appleSlideInUp {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) translateZ(-400px) translateY(50px) scale(0.7) rotateX(30deg);
+    filter: blur(10px);
+  }
+  40% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+    transform: perspective(1200px) translateZ(20px) translateY(-5px) scale(1.02) rotateX(-3deg);
+  }
+  85% {
+    transform: perspective(1200px) translateZ(-8px) translateY(2px) scale(0.99) rotateX(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) translateZ(0) translateY(0) scale(1) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+/* Logo - Animación elegante estilo Apple */
+.login-logo {
+  width: 90px;
+  margin-bottom: 24px;
+  animation: logoFadeInScale 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes logoFadeInScale {
+  0% {
+    transform: scale(0) translateY(-30px) rotateZ(-180deg);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  60% {
+    transform: scale(1.15) translateY(0) rotateZ(10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95) rotateZ(-5deg);
+  }
+  100% {
+    transform: scale(1) translateY(0) rotateZ(0deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Título - Tipografía elegante */
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  animation: titleSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes titleSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+/* Subtítulo */
+.login-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+  letter-spacing: 0.2px;
+  animation: titleSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+/* Formulario */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: formFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input fields - Estilo Apple minimalista */
+.login-form input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 0 0 3px rgba(100, 200, 255, 0.1),
+    inset 0 0 8px rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.login-form input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-form input:hover:not(:focus) {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón - Diseño Apple con efecto ripple */
+.login-btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #64c7ff 0%, #4da8ff 50%, #3a8fff 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 
+    0 8px 16px rgba(60, 143, 255, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  animation: buttonFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+.login-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 24px rgba(60, 143, 255, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #74d7ff 0%, #5db8ff 50%, #4a9fff 100%);
+}
+
+.login-btn:active {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 12px rgba(60, 143, 255, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Footer */
+.login-footer {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 24px;
+  animation: footerFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+}
+
+@keyframes footerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Mensaje de error - Animación suave */
+.login-form p {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin-top: 12px;
+  animation: errorShake 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 12px;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #ff6b6b;
+}
+
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* Sesión detectada botones */
+.login-box div > button {
+  max-width: 140px;
+}
+
+/* Footer Powered by - Profesional */
+.login-powered-by {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+  z-index: 0;
+}
+
+.login-powered-by span {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.login-powered-by strong {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(135deg, #64c7ff 0%, #4da8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.login-powered-by:hover strong {
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-text-fill-color: rgba(100, 199, 255, 1);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

@@ -1,0 +1,377 @@
+[
+  {
+    "id": "notif_1759469961220",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🔧 Test de Observer System",
+    "mensaje": "Esta notificación prueba el sistema de observers en tiempo real",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:39:21.220278",
+    "leida": true,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470377735",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "Test de Integración",
+    "mensaje": "Probando integración de auditoría con notificaciones",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:46:17.735189",
+    "leida": true,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470889877",
+    "tipo": "ESCALACION_AUTOMATICA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🚨 Escalación Crítica - Phase 4 Test",
+    "mensaje": "Solicitud escalada automáticamente después de 4 horas sin respuesta",
+    "prioridad": "CRITICA",
+    "datos_adicionales": {
+      "solicitud_id": "TEST_P4_001",
+      "escalado_desde": "supervisor",
+      "tiempo_sin_respuesta": "4 horas"
+    },
+    "timestamp": "2025-10-02T23:54:49.877856",
+    "leida": true,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470889877",
+    "tipo": "RECORDATORIO_PENDIENTE",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "⏰ Recordatorio - Solicitud Pendiente",
+    "mensaje": "Recordatorio: Tienes solicitudes pendientes de aprobación",
+    "prioridad": "ALTA",
+    "datos_adicionales": {
+      "solicitudes_pendientes": 3,
+      "tiempo_max_pendiente": "2 horas"
+    },
+    "timestamp": "2025-10-02T23:54:49.877856",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470889877",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🔧 Test Observer - Phase 4",
+    "mensaje": "Probando sistema de observers en tiempo real",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:49.877856",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892431",
+    "tipo": "ESCALACION_AUTOMATICA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🚨 Escalación Automática - Demo Phase 4",
+    "mensaje": "Esta solicitud ha sido escalada automáticamente al rol Master debido a tiempo excedido",
+    "prioridad": "CRITICA",
+    "datos_adicionales": {
+      "solicitud_id": "DEMO_ESCALATION",
+      "tiempo_sin_respuesta": "4+ horas",
+      "escalado_desde": "supervisor",
+      "ejecutivo_original": "Test Ejecutivo"
+    },
+    "timestamp": "2025-10-02T23:54:52.431377",
+    "leida": true,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892450",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #1",
+    "mensaje": "Notificación de prueba de carga número 1",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.450622",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892453",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #2",
+    "mensaje": "Notificación de prueba de carga número 2",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.453772",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892457",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #3",
+    "mensaje": "Notificación de prueba de carga número 3",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.457971",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892465",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #4",
+    "mensaje": "Notificación de prueba de carga número 4",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.465246",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892469",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #5",
+    "mensaje": "Notificación de prueba de carga número 5",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.469604",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892472",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #6",
+    "mensaje": "Notificación de prueba de carga número 6",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.472644",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892479",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #7",
+    "mensaje": "Notificación de prueba de carga número 7",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.479801",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892481",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #8",
+    "mensaje": "Notificación de prueba de carga número 8",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.481818",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892481",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #9",
+    "mensaje": "Notificación de prueba de carga número 9",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.481818",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1759470892489",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "Test Carga #10",
+    "mensaje": "Notificación de prueba de carga número 10",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-02T23:54:52.489620",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061100295",
+    "tipo": "SOLICITUD_PENDIENTE",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🚨 Nueva Solicitud de Alto Volumen #TEST002",
+    "mensaje": "Ejecutivo Gabriel Méndez solicita 25 IMEIs. Requiere aprobación MASTER.",
+    "prioridad": "ALTA",
+    "datos_adicionales": {
+      "solicitud_id": "TEST002",
+      "ejecutivo": "Gabriel Méndez",
+      "total_imeis": 25,
+      "tipo_aprobacion": "MASTER"
+    },
+    "timestamp": "2025-10-09T19:51:40.295503",
+    "leida": false,
+    "fecha_expiracion": "2025-10-11T19:51:40.295503"
+  },
+  {
+    "id": "notif_1760061100324",
+    "tipo": "SOLICITUD_PENDIENTE",
+    "destinatario_rol": "supervisor",
+    "destinatario_usuario": null,
+    "titulo": "📝 Nueva Solicitud de Aprobación #881521f9",
+    "mensaje": "Ejecutivo Gabriel Méndez solicita 8 IMEIs. Requiere aprobación SUPERVISOR.",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {
+      "solicitud_id": "881521f9-a176-4bc6-82b9-40ac18b5fa94",
+      "ejecutivo": "Gabriel Méndez",
+      "total_imeis": 8,
+      "tipo_aprobacion": "SUPERVISOR",
+      "prioridad_solicitud": "ALTA"
+    },
+    "timestamp": "2025-10-09T19:51:40.324755",
+    "leida": false,
+    "fecha_expiracion": "2025-10-11T19:51:40.324755"
+  },
+  {
+    "id": "notif_1760061101336",
+    "tipo": "SISTEMA_ALERTA",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🔧 Test de Observer System",
+    "mensaje": "Esta notificación prueba el sistema de observers en tiempo real",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {},
+    "timestamp": "2025-10-09T19:51:41.336765",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061361351",
+    "tipo": "EVENTO_INICIADO",
+    "destinatario_rol": "master",
+    "destinatario_usuario": null,
+    "titulo": "🎯 Evento Iniciado: Test Event ACTUALIZADO",
+    "mensaje": "El evento Test Event ACTUALIZADO ha iniciado automáticamente",
+    "prioridad": "ALTA",
+    "datos_adicionales": {
+      "event_id": "ade926e8-6608-444a-95ca-b9c807275676"
+    },
+    "timestamp": "2025-10-09T19:56:01.351117",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061480883",
+    "tipo": "SOLICITUD_RECHAZADA",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "⚠️ Solicitud Rechazada",
+    "mensaje": "Tu solicitud REQ-999 fue rechazada: Stock insuficiente",
+    "prioridad": "CRITICA",
+    "datos_adicionales": {
+      "request_id": "REQ-999"
+    },
+    "timestamp": "2025-10-09T19:58:00.883410",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061480889",
+    "tipo": "SOLICITUD_APROBADA",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "✅ Solicitud Aprobada",
+    "mensaje": "Tu solicitud REQ-888 fue aprobada por el supervisor",
+    "prioridad": "ALTA",
+    "datos_adicionales": {
+      "request_id": "REQ-888"
+    },
+    "timestamp": "2025-10-09T19:58:00.889697",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061480889",
+    "tipo": "RECORDATORIO_PENDIENTE",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "📅 Recordatorio",
+    "mensaje": "Tienes un evento programado mañana a las 10:00 AM",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {
+      "event_id": "EVT-123"
+    },
+    "timestamp": "2025-10-09T19:58:00.889697",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061669087",
+    "tipo": "SOLICITUD_RECHAZADA",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "⚠️ Solicitud Rechazada",
+    "mensaje": "Tu solicitud REQ-999 fue rechazada: Stock insuficiente",
+    "prioridad": "CRITICA",
+    "datos_adicionales": {
+      "request_id": "REQ-999"
+    },
+    "timestamp": "2025-10-09T20:01:09.087900",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061669094",
+    "tipo": "SOLICITUD_APROBADA",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "✅ Solicitud Aprobada",
+    "mensaje": "Tu solicitud REQ-888 fue aprobada por el supervisor",
+    "prioridad": "ALTA",
+    "datos_adicionales": {
+      "request_id": "REQ-888"
+    },
+    "timestamp": "2025-10-09T20:01:09.094446",
+    "leida": false,
+    "fecha_expiracion": null
+  },
+  {
+    "id": "notif_1760061669097",
+    "tipo": "RECORDATORIO_PENDIENTE",
+    "destinatario_rol": "ejecutivo",
+    "destinatario_usuario": "Gamend",
+    "titulo": "📅 Recordatorio",
+    "mensaje": "Tienes un evento programado mañana a las 10:00 AM",
+    "prioridad": "MEDIA",
+    "datos_adicionales": {
+      "event_id": "EVT-123"
+    },
+    "timestamp": "2025-10-09T20:01:09.097274",
+    "leida": false,
+    "fecha_expiracion": null
+  }
+]

@@ -1,0 +1,237 @@
+/* ==========================================================
+   Dashboard Ejecutivo — Apple Red Edition (Refined Premium)
+   ========================================================== */
+
+/* Fuente y layout */
+.exec-dashboard-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1c1c1e;
+  letter-spacing: 0.01em;
+}
+
+/* ---------------- HEADER ---------------- */
+.exec-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 16px 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.exec-dashboard-header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.exec-dashboard-header .logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #ff3b30;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.exec-dashboard-header .card-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1c1c1e;
+}
+
+.exec-dashboard-header .card-value {
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+/* ---------------- BOTONES ---------------- */
+.exec-btn {
+  background: linear-gradient(180deg, #ff3b30 0%, #e13228 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+}
+
+.exec-btn:hover {
+  background: linear-gradient(180deg, #ff4c3f 0%, #d62821 100%);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(255, 59, 48, 0.35);
+}
+
+.exec-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 59, 48, 0.25);
+}
+
+.exec-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------------- TABS ---------------- */
+.exec-cards-container {
+  display: flex;
+  gap: 10px;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+}
+
+.exec-cards-container .exec-btn {
+  background: #fff;
+  color: #1c1c1e;
+  border: 1.5px solid #ff3b30;
+  box-shadow: none;
+  transition: all 0.25s ease;
+}
+
+.exec-cards-container .exec-btn:hover {
+  background: #ff3b30;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,59,48,0.25);
+}
+
+/* Botón activo */
+.exec-cards-container .exec-btn.exec-btn-active,
+.exec-cards-container .exec-btn.active {
+  background: #ff3b30;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255,59,48,0.35);
+}
+
+/* ---------------- CONTENIDO ---------------- */
+.exec-dashboard-footer {
+  flex: 1;
+  padding: 24px;
+}
+
+/* ---------------- TARJETAS ---------------- */
+.exec-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  margin-bottom: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.exec-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.exec-card b {
+  color: #1c1c1e;
+}
+
+/* ---------------- BLOQUEADOS ---------------- */
+.bloqueado-por-mi {
+  border-left: 5px solid #ff3b30;
+  background: linear-gradient(90deg, #fff5f5 0%, #fff 100%);
+}
+
+.bloqueado-por-otro {
+  border-left: 5px solid #b0b0b0;
+  background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
+}
+
+/* ---------------- ESTADOS DE INVENTARIO ---------------- */
+.exec-card[data-estado="bloqueado"] {
+  border-color: #ff8800;
+  background: linear-gradient(180deg, #fff5e5, #fffaf0);
+}
+
+.exec-card[data-estado="vendido"] {
+  border-color: #34c759;
+  background: linear-gradient(180deg, #e6f9eb, #f0fff4);
+}
+
+.exec-card[data-estado="reservado"] {
+  border-color: #ffd43b;
+  background: linear-gradient(180deg, #fff9e6, #fffdf2);
+}
+
+.exec-card[data-estado="disponible"] {
+  border-color: #2dd4bf;
+  background: linear-gradient(180deg, #e6fffa, #f2fffc);
+}
+
+.exec-card[data-estado="rechazado"] {
+  border-color: #9ca3af;
+  background: linear-gradient(180deg, #f3f4f6, #ffffff);
+}
+
+/* ---------------- INPUTS ---------------- */
+input, select, textarea {
+  border: 1px solid #d1d1d6;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255,255,255,0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ff3b30;
+  box-shadow: 0 0 0 3px rgba(255,59,48,0.15);
+}
+
+/* ---------------- PAGINACIÓN ---------------- */
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------------- SNACKBAR ---------------- */
+.snackbar {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.snackbar.info { background: #007aff; }
+.snackbar.success { background: #34c759; }
+.snackbar.error { background: #ff3b30; }
+
+/* TEMPORAL: Resalta el panel de devolución de eSIM para depuración visual */
+.panel {
+  border: 2px solid red !important;
+  background: #fffbe6 !important;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "SISTEMA_INICIADO",
+    "level": "INFO",
+    "user_id": null,
+    "user_role": null,
+    "session_id": null,
+    "description": "Sistema de auditoría iniciado",
+    "entity_type": null,
+    "entity_id": null,
+    "before_data": null,
+    "after_data": null,
+    "metadata": {
+      "version": "1.0",
+      "data_dir": "data"
+    },
+    "ip_address": null,
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "LOGIN",
+    "level": "INFO",
+    "user_id": "Gabriel Elías Méndez Campos",
+    "user_role": "ejecutivo",
+    "session_id": "session_12345",
+    "description": "Usuario Gabriel Méndez inició sesión",
+    "entity_type": null,
+    "entity_id": null,
+    "before_data": null,
+    "after_data": null,
+    "metadata": {
+      "login_method": "password",
+      "client_info": "GUI Desktop"
+    },
+    "ip_address": "192.168.1.100",
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "SOLICITUD_CREADA",
+    "level": "INFO",
+    "user_id": "Gabriel Elías Méndez Campos",
+    "user_role": "ejecutivo",
+    "session_id": null,
+    "description": "Nueva solicitud multi-IMEI creada",
+    "entity_type": "solicitud",
+    "entity_id": "SOL-001",
+    "before_data": null,
+    "after_data": {
+      "total_imeis": 8,
+      "tipo_aprobacion": "SUPERVISOR",
+      "items": [
+        {
+          "marca": "Samsung",
+          "terminal": "A54",
+          "cantidad": 5
+        },
+        {
+          "marca": "iPhone",
+          "terminal": "15",
+          "cantidad": 3
+        }
+      ]
+    },
+    "metadata": {
+      "prioridad": "ALTA",
+      "evento_id": null
+    },
+    "ip_address": null,
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "SOLICITUD_APROBADA",
+    "level": "INFO",
+    "user_id": "admin",
+    "user_role": "supervisor",
+    "session_id": null,
+    "description": "Solicitud SOL-001 aprobada por supervisor",
+    "entity_type": "solicitud",
+    "entity_id": "SOL-001",
+    "before_data": {
+      "estado": "PENDIENTE"
+    },
+    "after_data": {
+      "estado": "APROBADA"
+    },
+    "metadata": {
+      "observaciones": "Aprobación rápida - ejecutivo confiable",
+      "tiempo_aprobacion": "15 minutos"
+    },
+    "ip_address": null,
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "ERROR_SISTEMA",
+    "level": "ERROR",
+    "user_id": null,
+    "user_role": null,
+    "session_id": null,
+    "description": "Error conectando con base de datos de inventario",
+    "entity_type": null,
+    "entity_id": null,
+    "before_data": null,
+    "after_data": null,
+    "metadata": {
+      "error_code": "DB_CONNECTION_TIMEOUT",
+      "component": "inventory_manager",
+      "retry_count": 3
+    },
+    "ip_address": null,
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377066115",
+    "timestamp": "2025-10-02T23:46:17.066115",
+    "action_type": "IMEI_ESTADO_CAMBIADO",
+    "level": "CRITICAL",
+    "user_id": "rumadr",
+    "user_role": "master",
+    "session_id": null,
+    "description": "IMEI 123456789012345 cambió de VENDIDO a DISPONIBLE - Posible error",
+    "entity_type": "imei",
+    "entity_id": "123456789012345",
+    "before_data": {
+      "estado": "VENDIDO",
+      "fecha_venta": "2024-09-01"
+    },
+    "after_data": {
+      "estado": "DISPONIBLE",
+      "razon": "Corrección manual"
+    },
+    "metadata": {
+      "justificacion": "Error en proceso de venta - se revierte",
+      "supervisor_aprobacion": "admin"
+    },
+    "ip_address": null,
+    "user_agent": null
+  },
+  {
+    "id": "audit_1759470377214248",
+    "timestamp": "2025-10-02T23:46:17.214248",
+    "action_type": "SOLICITUD_CREADA",
+    "level": "INFO",
+    "user_id": "Gabriel Elías Méndez Campos",
+    "user_role": null,
+    "session_id": null,
+    "description": "Solicitud 058b89e8-61a2-47ff-bf7a-73895791e303 creada por Gabriel Méndez - 5 IMEIs - Tipo: AUTOMATICA",
+    "entity_type": "solicitud",
+    "entity_id": "058b89e8-61a2-47ff-bf7a-73895791e303",
+    "before_data": null,
+    "after_data": {
+      "id_solicitud": "058b89e8-61a2-47ff-bf7a-73895791e303",
+      "usuario_solicitante": "Gabriel Elías Méndez Campos",
+      "nombre_solicitante": "Gabriel Méndez",
+      "estado": "APROBADA",
+      "tipo_aprobacion": "AUTOMATICA",
+      "total_items": 5,
+      "items": [
+        {
+          "marca": "Samsung",
+          "terminal": "A32",
+          "cantidad": 3,
+          "estado": "PENDIENTE"
+        },
+        {
+          "marca": "Xiaomi",
+          "terminal": "Redmi 12",
+          "cantidad": 2,
+          "estado": "PENDIENTE"
+        }
+      ]
+    },
+    "metadata": {
+      "tipo_aprobacion": "AUTOMATICA",
+      "prioridad_solicitud": "NORMAL",
+      "evento_id": null,
+      "observaciones": "Test de auditoría integrada"
+    },
+    "ip_address": null,
+    "user_agent": null
+  }
+]

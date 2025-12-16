@@ -1,0 +1,81 @@
+{
+  "rules": {
+    // ═══════════════════════════════════════════════════════════
+    // REGLAS DE SEGURIDAD - REALTIME DATABASE
+    // Kolbi Monitor Sells - Infinix Dev
+    // ═══════════════════════════════════════════════════════════
+    
+    // ✅ Solo usuarios autenticados pueden acceder
+    ".read": "auth != null",
+    ".write": "auth != null",
+    
+    // ═══════════════════════════════════════════════════════════
+    // NODOS PRINCIPALES
+    // ═══════════════════════════════════════════════════════════
+    
+    "usuarios": {
+      // Solo supervisores/admin pueden leer usuarios
+      ".read": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      "$uid": {
+        // Cada usuario solo puede leer su propio perfil
+        ".read": "auth.uid === $uid || root.child('roles').child(auth.uid).child('role').val() === 'supervisor'",
+        ".write": "auth.uid === $uid || root.child('roles').child(auth.uid).child('role').val() === 'admin'"
+      }
+    },
+    
+    "inventario": {
+      // Todos los usuarios autenticados pueden leer
+      ".read": "auth != null",
+      // Solo supervisores/admin pueden escribir
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      "$imei": {
+        ".read": "auth != null",
+        ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    
+    "solicitudes": {
+      // Todos los usuarios pueden leer solicitudes
+      ".read": "auth != null",
+      // Solo ejecutivos pueden crear, supervisores pueden modificar
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin' || root.child('roles').child(auth.uid).child('role').val() === 'ejecutivo')",
+      "$sid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    
+    "esims": {
+      ".read": "auth != null",
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      "$id": {
+        ".read": "auth != null",
+        ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    
+    "marketing_events": {
+      ".read": "auth != null",
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      "$id": {
+        ".read": "auth != null",
+        ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    
+    "vendidos": {
+      ".read": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      "$id": {
+        ".read": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+        ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'supervisor' || root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    
+    "roles": {
+      ".read": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'admin')",
+      ".write": "auth != null && (root.child('roles').child(auth.uid).child('role').val() === 'admin')"
+    }
+  }
+}
