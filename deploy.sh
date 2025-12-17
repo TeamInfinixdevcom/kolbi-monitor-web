@@ -10,8 +10,8 @@ echo "================================"
 
 # 1. Remover recharts
 echo ""
-echo "1️⃣ Removiendo recharts (no se usa)..."
-npm uninstall recharts
+echo "1️⃣ Removiendo recharts (si existe)..."
+npm uninstall recharts || true
 echo "✅ Hecho"
 
 # 2. Verificar build
@@ -23,7 +23,7 @@ echo "✅ Build completado"
 # 3. Verificar tamaño
 echo ""
 echo "3️⃣ Verificando tamaño del build..."
-BUILD_SIZE=$(du -sh build | cut -f1)
+BUILD_SIZE=$(du -sh build 2>/dev/null | cut -f1 || echo "N/A")
 echo "📊 Tamaño del build: $BUILD_SIZE"
 
 # 4. Deploy
